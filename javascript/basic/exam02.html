@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        true && alert('출력이 되나요?')
+        false && alert('false일때 출력이 되나요?')
+        false || alert('출력이 되나요?')
+        true || alert('true일떄 출력이 되나요?')
+
+        let a = 1, b = -1, c = 0
+        let d = ++a && b++ || ++c // 0이 아닌 값은 모두 참(음수 포함)
+                                // d는 가장 마지막에 연산된 값을 저장함
+                                // ++b 일때 >> a = 2(전위, 0이 아니므로 참, AND이므로 뒤 연산도 실행)
+                                //             b = 0(전위, 0이므로 거짓, OR이므로 뒤 연산도 실행)
+                                //             c = 1(전위)
+                                //             d = 1(가장 마지막 사용(연산)값인 c = 1, 1(c)값이 저장됨)
+
+                                // b++ 일때 >> a = 2(전위, 0이 아니므로 참, AND이므로 뒤 연산도 실행)
+                                //             b = -1(후위, 아직 다음연산 넘어가기 전 이므로 -1, 하지만 0은 아니므로 참)
+                                //             c = 0(전위지만, OR이므로 앞 b가 참이기 때문에 실행 안함, 그대로 0)
+                                //             d = -1(가장 마지막으로 사용한 값인 b = -1, -1(b)값이 저장됨)
+        console.log(a + ' : ' + b + ' : ' + c + ' : ' + d)
+        // console.log(`변수 : 변수 : 변수 : 변수`) 백틱 ` 연산자
+        console.log(`${a} : ${b} : ${c} : ${d}`)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
