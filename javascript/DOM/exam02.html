@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h2><em>안녕하세요</em></h2>
+    <h2 id="h01" class="c01">안녕하세요</h2>
+    <h2 id="h02">안녕하세요</h2>
+    <h2 class="c01">안녕하세요</h2>
+    <!-- <button onclick="alert('click...')">변경</button> -->
+    <figure>
+        <img src="../../images/cat.jpg">
+    </figure>
+    <button>변경</button>
+    <button onclick="eventClick()">변경1</button>
+    <button onclick="eventClick()">변경2</button>
+    <button onclick="eventClick()">변경3</button>
+    <button onclick="eventClick()">변경4</button>
+    
+    <script>
+        function eventClick() {
+            alert('click... click...')
+        }
+
+        let btn = document.querySelector('button');
+        btn.addEventListener('click', function() {
+            //alert('버튼 클릭...');
+
+            // <h2> 태그 중 첫번째 태그 선택
+            let h2Tags = document.getElementsByTagName('h2')
+            h2Tags[0].innerText = '변경된 데이터...'
+            //let h2Tag = document.querySelector('h2');
+            //let h2Tag = document.querySelector('#h02');
+            let h2Tag = document.getElementById('h02');
+            //h2Tag.innerText = "<mark>GOOD-BYE!!!!</mark>";
+            h2Tag.innerHTML = "<mark>GOOD-BYE!!!!</mark>";
+            
+            let imgTag = document.querySelector('img')
+            imgTag.src = '../../images/dog.jpeg'
+        })
+        
+        /*
+        btn.onclick = function() {
+            alert('btn click...');
+        }
+        */
+    </script>
+</body>
+</html>
