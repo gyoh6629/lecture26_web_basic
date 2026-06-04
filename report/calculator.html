@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        #result {
+            width: 430px;
+            height: 50px;
+            padding: 10px;
+            text-align: right;
+            font-size: 50px;
+        }
+
+        button {
+            width: 90px;
+            height: 90px;
+            font-size: 30px;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            let result = document.querySelector('#result')
+
+            let one = document.querySelector('#one')
+            one.addEventListener('click', function() {
+                result.value += '1'
+            })
+            let two = document.querySelector('#two')
+            two.addEventListener('click', function() {
+                result.value += '2'
+            })
+            let three = document.querySelector('#three')
+            three.addEventListener('click', function() {
+                result.value += '3'
+            })
+            let four = document.querySelector('#four')
+            four.addEventListener('click', function() {
+                result.value += '4'
+            })
+            let five = document.querySelector('#five')
+            five.addEventListener('click', function() {
+                result.value += '5'
+            })
+            let six = document.querySelector('#six')
+            six.addEventListener('click', function() {
+                result.value += '6'
+            })
+            let seven = document.querySelector('#seven')
+            seven.addEventListener('click', function() {
+                result.value += '7'
+            })
+            let eight = document.querySelector('#eight')
+            eight.addEventListener('click', function() {
+                result.value += '8'
+            })
+            let nine = document.querySelector('#nine')
+            nine.addEventListener('click', function() {
+                result.value += '9'
+            })
+            let zero = document.querySelector('#zero')
+            zero.addEventListener('click', function() {
+                result.value += '0'
+            })
+            let add = document.querySelector('#add')
+            add.addEventListener('click', function() {
+                result.value += '+'
+            })
+            let sub = document.querySelector('#sub')
+            sub.addEventListener('click', function() {
+                result.value += '-'
+            })
+            let mul = document.querySelector('#mul')
+            mul.addEventListener('click', function() {
+                result.value += '*'
+            })
+            let dev = document.querySelector('#dev')
+            dev.addEventListener('click', function() {
+                result.value += '/'
+            })
+            let clear = document.querySelector('#clear')
+            clear.addEventListener('click', function() {
+                result.value = null
+            })
+            let equal = document.querySelector('#equal')
+            equal.addEventListener('click', function() {
+                let res = eval(result.value)
+                result.value = res
+            })
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <input type="text" id="result" >
+        <button id="one">1</button>
+        <button id="two">2</button>
+        <button id="three">3</button>
+        <button id="add">+</button>
+        <button id="four">4</button>
+        <button id="five">5</button>
+        <button id="six">6</button>
+        <button id="sub">-</button>
+        <button id="seven">7</button>
+        <button id="eight">8</button>
+        <button id="nine">9</button>
+        <button id="mul">*</button>
+        <button id="zero">0</button>
+        <button id="clear">C</button>
+        <button id="equal">=</button>
+        <button id="dev">/</button>
+
+    </div>
+
+</body>
+</html>

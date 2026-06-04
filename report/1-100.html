@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let numlist = [];
+        let limit = 7;
+        let start = 1;
+        let end = 100;
+        let com = 0;
+
+        function computer() {
+            com = Math.floor(Math.random()*100) + 1;
+            return com;
+        }
+        function nowrange(start, end){
+            alert(`현재 범위 : ${start} ~ ${end}`)
+        }
+        function updown(num, computer){
+            if(num < computer){
+                alert('UP!');
+                return 1
+            }
+            else{
+                alert('DOWN!');
+                return 2;
+            }
+        }  
+
+        nowrange(start, end);
+
+        com = computer();
+
+        while(limit > 0){
+            let num = parseInt(prompt('숫자를 입력하세요 : '));
+            numlist.push(num);
+            if (start <= num && num <= end){
+                if(num == com){
+                    alert('정답입니다!');
+                    alert(`입력 기록 : ${numlist}`);
+                    alert(`총 시도 횟수 : ${limit}회`);
+                    break;
+                }
+                else{
+                    limit -= 1;
+                    if(limit == 0){
+                        alert(`기회를 모두 소진했습니다. 정답 : ${com}`);
+                        break;
+                    }
+                    switch(updown(num, com)){
+                        case 1:
+                            alert(`남은 기회 : ${limit}`);
+                            start = num+1;
+                            nowrange(start, end);
+                            break;
+                        case 2:
+                            alert(`남은 기회 : ${limit}`);
+                            end = num-1;
+                            nowrange(start, end);
+                            break;
+                    }
+                }
+            }
+            else{
+                alert('범위 안의 숫자를 입력하세요!');
+                continue;
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

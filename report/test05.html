@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.write("<운동장 한바퀴 도는 소요시간><br>");
+        document.write("철수 : 90초<br>");
+        document.write("영희 : 60초<br>");
+        document.write("민수 : 45초<br><br>");
+        let cheolsu = 90;
+        let younghee = 60;
+        let minsu = 45;
+        let i = 1;
+        let time;
+        while(true){
+            time = cheolsu * i;
+            if(time % younghee == 0 && time % minsu == 0){
+                break;
+            }
+            else{
+                i += 1;
+            }
+        }
+        let cheolsu_turn = parseInt(time/cheolsu);
+        let younghee_turn = parseInt(time/younghee);
+        let minsu_turn = parseInt(time/minsu);
+        let m = parseInt(time / 60);
+        let s = parseInt(time % 60);
+        let M = 0;
+        let S = 0;
+        if(m > 0){
+            M += m;
+        }
+        if(s > 0){
+            S += s;
+        }
+        if(S == 0){
+            document.write(`8시 출발 후 다시 출발점에서 만나는 시간 : 8시 ${M}분<br>`);
+            document.write(`8시 ${M}분에 철수는 총 ${cheolsu_turn}바퀴를 뛰었음<br>`)
+            document.write(`8시 ${M}분에 영희는 총 ${younghee_turn}바퀴를 뛰었음<br>`)
+            document.write(`8시 ${M}분에 민수는 총 ${minsu_turn}바퀴를 뛰었음`)
+        }
+        else{
+            document.write(`8시 출발 후 다시 출발점에서 만나는 시간 : 8시 ${M}분 ${S}초<br>`);
+            document.write(`8시 ${M}분 ${S}초에 철수는 총 ${cheolsu_turn}바퀴를 뛰었음<br>`)
+            document.write(`8시 ${M}분 ${S}초에 영희는 총 ${younghee_turn}바퀴를 뛰었음<br>`)
+            document.write(`8시 ${M}분 ${S}초에 민수는 총 ${minsu_turn}바퀴를 뛰었음`)
+        }
+        
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function count369(num){
+            count = 0;
+            number = num.toString()
+            for(let i=0; i < number.length; i++){
+                if(number[i] == '3' || number[i] == '6' || number[i] == '9'){
+                    count += 1;
+                }
+            }
+            return count;
+        }
+        function count10(num){
+            count = 0;
+            number = parseInt(num);
+            if(number % 10 != 0) return 0;
+            return parseInt(number / 10);
+        }
+        function document369(num){
+            let bbo = count10(num);
+            let zzack = count369(num);
+            if (bbo == 0 && zzack == 0) {
+                document.write(num);
+                return;
+            }
+            for(let i=0; i < bbo; i++){
+                document.write('뽀');
+                continue;
+            }
+            for(let j=0; j < zzack; j++){
+                document.write('짝');
+                continue;
+            }
+            if(bbo > 0){
+                document.write('숑');
+            }
+         }
+        let num = parseInt(prompt('숫자를 입력하세요 : '));
+        for(let i = 1; i <= num; i++){
+            document369(i);
+            document.write('<br>')
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

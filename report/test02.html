@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        while(true){
+            start = parseInt(prompt("시작단 : "));
+            end = parseInt(prompt("종료단 : "));
+            if(start > end){
+                alert("올바르지 않은 입력입니다.");
+                continue;
+            }
+            else{
+                for(let i=start; i<=end; ++i){
+                    document.write(`*** ${i}단 ***<br>`);
+                    for(let j=1; j<=9; ++j){
+                        document.write(`${i} * ${j} = ${i*j}<br>`);
+                    }
+                    document.write("<br>");
+                }
+            }
+            break;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

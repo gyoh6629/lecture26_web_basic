@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.write("< 100-200 숫자 중 자리수가 4이고, 6개의 배수 출력 ><br>");
+        let count = 0;
+        for(let i=100; i<=200; ++i){
+            temp = i;
+            temp_count10 = 0;
+            temp_count1 = 0;
+            if(temp % 6 == 0){
+                while(temp >= 100){
+                    temp -= 100;
+                }
+                while(temp >= 10){
+                    temp -= 10;
+                    temp_count10 += 1;
+                }
+                while(temp >= 1){
+                    temp -= 1;
+                    temp_count1 += 1;
+                }
+            }
+            if(temp_count1 == 4 || temp_count10 == 4){
+                document.write(i);
+                document.write(" ");
+                count += 1;
+            }
+        }
+        document.write(`<br>총 개수 : ${count}개`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
