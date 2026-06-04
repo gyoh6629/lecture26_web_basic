@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li{
+            list-style-type: none;
+            float: left;
+            margin-right: 20px;
+        }
+        li:first-child{
+            color: red;
+        }
+        li:last-child{
+            color: blue;
+        }
+        li:nth-child(2n+1){
+            background-color: lightgray;
+        }
+        a:link{
+            color: orange;
+            text-decoration: none;
+        }
+        a:visited{
+            color: orange;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        div{
+            clear: both;
+        }
+        h2:first-of-type{
+            background-color: yellow;
+        }
+        h2:last-of-type{
+            background-color: pink;
+        }
+        p::first-line{
+            text-decoration: underline;
+        }
+        p::first-letter{
+            font-size: 4em;
+        }
+        p::selection{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>ONE</li>
+        <li><a href="http://www.naver.com" target="_blank">TWO</a></li>
+        <li>THREE</li>
+        <li>FOUR</li>
+        <li>FIVE</li>
+        <li>SIX</li>
+        <li><a href="http://www.daum.net">SEVEN</a></li>
+        <li>EIGHT</li>
+        <li>NINE</li>
+        <li>TEN</li>
+    </ul>
+    <div>
+        <h1>Hello</h1>
+        <h2>Header</h2>
+        <h2>Header</h2>
+        <h1>Hello</h1>
+        <h2>Header</h2>
+        <h2>Header</h2>
+        <h2>Header</h2>
+        <h1>Hello</h1>
+    </div>
+    <p>
+        asdfasdfasdfasdf
+        asdfasdfasdfasdfbr <br>
+        asdff <br>
+    </p>
+</body>
+</html>
