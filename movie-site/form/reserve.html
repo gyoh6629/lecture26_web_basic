@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화 예매 페이지</title>
+</head>
+<body>
+    <h1>영화 예매</h1>
+    <a href="../index.html">메인으로 돌아가기</a> | <a href="survey.html">선호도 조사</a> | <a href="result.html">예매 결과 미리보기</a>
+    <hr>
+    <form>
+        기본정보<br><br>
+        이름 : <input type="text" placeholder="이름을 입력하세요"><br><br>
+        이메일 : <input type="email" placeholder="example@email.com"><hr><br>
+    </form>
+    <hr>
+    <form>
+        관람정보<br><br>
+        관람 날짜 : <input type="date"><br><br>
+        관람 시간 : 
+        <select>
+            <option>10:00</option>
+            <option>13:00</option>
+            <option>16:00</option>
+            <option>19:00</option>
+        </select><br><br>
+        영화 선택 : <br>
+        <input type="radio" name="ticket" value="1">죠죠의 기묘한 모험 <input type="radio" name="ticket" value="2">프로젝트 헤일메리<br><br>
+        좌석 선택 : <br>
+        <input type="checkbox" name="prefer" value="1">일반석 <input type="checkbox" name="prefer" value="2">프리미엄석 <input type="checkbox" name="prefer" value="3">커플석<br><br>
+        인원 수 : <input type="number" min="1" max="8" value="1"><br><br>
+        요청사항 : <br>
+        <textarea rows="10" cols="40"></textarea><hr>
+        <input type="submit" value="예매하기"> <input type="reset" value="다시 작성">
+    </form>
+</body>
+</html>

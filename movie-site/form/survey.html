@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선호도 조사</title>
+</head>
+<body>
+    <h1>영화 선호도 조사</h1>
+    <a href="../index.html">메인으로 돌아가기</a> | <a href="reserve.html">예매하기</a><hr>
+    <table border="1">
+        <tr>
+            <th>질문</th><th>응답</th>
+        </tr>
+        <tr>
+            <td>좋아하는 장르</td>
+            <td>
+                <form>
+                    <select>
+                        <option>애니메이션</option>
+                        <option>SF</option>
+                        <option>모험</option>
+                        <option>미스터리</option>
+                    </select>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>한 달 평균 영화 관람 횟수</td>
+            <td>
+                <form>
+                    <input type="text">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>영화관 선택 기준</td>
+            <td>
+                <form>
+                    <input type="checkbox" name="prefer" value="1">가격
+                    <input type="checkbox" name="prefer" value="2">거리
+                    <input type="checkbox" name="prefer" value="3">시설
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>선호 관람 시간</td>
+            <td>
+                <form>
+                    <input type="radio" name="ticket" value="1"> 낮
+                    <input type="radio" name="ticket" value="2"> 저녁
+                </form>
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="제출하기">
+</body>
+</html>
